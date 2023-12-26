@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("../Images/sky.avif");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .solar-system {
+            position: relative;
+            width: 100vh;
+            height: 100vh;
+            overflow: hidden;
+  }
+
+        .sun {
+            width: 100px;
+            height: 100px;
+            background-image: url('../Images/sun.png'); /* Replace 'sun.png' with the path to your sun image */
+            background-size: cover;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: sun 12s linear infinite;
+        }
+
+        .planet {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .orbit {
+            animation: orbit 5s linear infinite;
+
+        }
+
+
+        .mercury {
+            animation-duration: 2s;
+            animation: mercury 12s linear infinite;
+            background-image: url('../Images/mercury.png');
+        }
+
+        .venus {
+            animation-duration: 4s;
+            animation: venus 11s linear infinite;
+            background-image: url('../Images/venus.png');
+        }
+
+        .earth {
+            animation-duration: 6s;
+            animation: earth 10s linear infinite;
+            background-image: url('../Images/Earth.png');
+        }
+
+        .mars {
+            animation-duration: 8s;
+            animation: mars 9s linear infinite;
+            background-image: url('../Images/mars.png');
+        }
+
+        .jupiter {
+            animation-duration: 12s;
+            animation: jupiter 8s linear infinite;
+            background-image: url('../Images/jupiter.png');
+        }
+
+        .saturn {
+            animation-duration: 16s;
+            animation: saturn 7s linear infinite;
+            background-image: url('../Images/saturn.png');
+        }
+
+        .uranus {
+            animation-duration: 20s;
+            animation: uranus 5s linear infinite;
+            background-image: url('../Images/Uranus.png');
+        }
+
+        .neptune {
+            animation-duration: 5s;
+            animation: neptune 3s linear infinite;
+            background-image: url('../Images/neptune.png');
+
+        }
+
+        .moon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('../Images/moon.png'); /* Replace 'moon.png' with the path to your Moon image */
+            background-size: cover;
+            animation: moon 2s linear infinite;
+        }
+
+        @keyframes sun {
+            from {
+                transform: rotate(0deg) translateX(0px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(0px) rotate(360deg);
+            }
+        }
+
+        @keyframes mercury {
+            from {
+                transform: rotate(0deg) translateX(250px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(250px) rotate(-360deg);
+            }
+        }
+        @keyframes venus {
+            from {
+                transform: rotate(0deg) translateX(225px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(225px) rotate(-360deg);
+            }
+        }
+
+        @keyframes earth {
+            from {
+                transform: rotate(0deg) translateX(200px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(200px) rotate(-360deg);
+            }
+        }
+        @keyframes mars {
+            from {
+                transform: rotate(0deg) translateX(175px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(175px) rotate(-360deg);
+            }
+        }
+        @keyframes jupiter {
+            from {
+                transform: rotate(0deg) translateX(150px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(150px) rotate(-360deg);
+            }
+        }
+        @keyframes saturn {
+            from {
+                transform: rotate(0deg) translateX(125px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(125px) rotate(-360deg);
+            }
+        }
+
+        @keyframes uranus {
+            from {
+                transform: rotate(0deg) translateX(100px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(100px) rotate(-360deg);
+            }
+        }
+
+        @keyframes neptune {
+            from {
+                transform: rotate(0deg) translateX(75px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(75px) rotate(-360deg);
+            }
+        }
+        @keyframes moon {
+            from {
+                transform: rotate(0deg) translateX(50px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(50px) rotate(-360deg);
+            }
+        }
+    </style>
+    <title>Solar System</title>
+</head>
+<body>
+<div class="solar-system">
+    <div class="sun"></div>
+    <div class="planet orbit mercury"></div>
+    <div class="planet orbit venus"></div>
+    <div class="planet orbit earth">
+        <div class="moon"></div>
+    </div>
+    <div class="planet orbit mars"></div>
+    <div class="planet orbit jupiter"></div>
+    <div class="planet orbit saturn"></div>
+    <div class="planet orbit uranus"></div>
+    <div class="planet orbit neptune"></div>
+</div>
+</body>
+</html>
